@@ -1,0 +1,5 @@
+For the LRU Cache, I decided to use a DoublyLinkedList in order to implement the Least Recently used behavior. This way I could have the head.next be the Most Recently used and the tail.prev be the Least recently used. By using dummy head and tail Nodes I could avoid further difficulties that would arise when creating and maintaining the head and tail of the DoublyLinkedList. Additionally, each operation add, evicting are all O(1) since we can refer to the nodes directly without finding its position. Adding a node you remove it from the list then add it to the front. Evicting is also simple since you remove the element from the end of the list.
+
+Time complexity is O(1). In order to make the search O(1) instead of O(n) for the DoublyLinkedList, I used a HashMap which would contain the key, value(node) pairs which I would be able to get the node in O(1) time instead of iterating through the entire list.
+
+Space complexity is O(n). The list will grow with the amount of elements and the Hashmap will as well

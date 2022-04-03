@@ -1,0 +1,29 @@
+Task0 - 
+    PartA - Time Complexity is O(1)
+        Getting the first text in the texts list method is O(1). I get the index of the first element using [0]. No looping is required.
+    PartB - Time Complexity is O(1) 
+        Getting the last text in the texts list method is O(1). I get the index of the last element using len(x) - 1. No looping is required.
+
+Task1 - Time complexity is O(n)
+    In order to fetch different numbers in each list I need to iterate over both calls and texts and store the records in a set for uniqueness.
+    I iterate over the texts, n ,then iterate over the calls, n. Adding to the set is O(1).
+
+Task2 - Time complexity is O(n)
+    In order to fetch all the calls, and store their values uniquely I used a map. I iterated over the calls list storing the duration of both
+    incoming and ansIring calls. If they previously existed I added the durations together.
+    I iterate over the calls O(n), storing values then iterate over them again to find the largest value O(n). I use index but thats O(1) since
+    the number is of constant lenth. Overall its O(2n)
+
+Task3
+    PartA - Time complexity is O(nlogn)
+        I iterate over the entire calls list so O(n). I'm using a lot of helper functions to identify the number code, these .finds are O(1), no for loop nesting is involved.
+        However I use the sorted() method to change the lexicological order, which has O(nlogn) thus
+        O(n + nlogn) = O(2nlogn)
+    PartB - Time complexity is O(n)
+        I iterate over the entire calls list so O(n). I'm adding values as I loop and using the isBangaloreNumber function which is O(1).
+
+Task4 - Time complexity is O(nlogn)
+    I iterate over the entire list of texts storing each outgoing and incoming mobile number in a set O(n).
+    I iterate over the entire list of calls, adding callers and answering calls to numbers to avoid O(n).
+    Then I sort the difference into lexicological order, which has O(nlogn)
+    O(2n + nlogn) => O(3nlogn)
